@@ -1,0 +1,19 @@
+#app{
+  display: grid;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 30px;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-gap: 16px;
+  gap: 16px;
+}
+#app h2{
+  margin-bottom: 16px;
+}
+.list a{
+  display: list-item;
+  list-style: decimal-leading-zero;
+  list-style-position: inside;
+}
+

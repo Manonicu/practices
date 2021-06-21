@@ -1,0 +1,19 @@
+{
+  "name": "practices",
+  "version": "1.0.0",
+  "description": "html&css&js practices",
+  "main": "index.js",
+  "repository": "https://github.com/manonicu/practices.git",
+  "author": "Manon.icu <gemini0525@foxmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^2.3.8"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}
