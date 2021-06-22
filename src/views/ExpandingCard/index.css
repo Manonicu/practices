@@ -1,0 +1,41 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.cards .card {
+  position: relative;
+  border-radius: 7.5vw;
+  width: 7.5vw;
+  height: 100%;
+  overflow: hidden;
+  transition: width 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.cards .card h3 {
+  position: absolute;
+  left: 3rem;
+  bottom: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.cards .card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards .card.active {
+  width: 50vw;
+}
+
+.cards .card.active h3 {
+  opacity: 1;
+}
