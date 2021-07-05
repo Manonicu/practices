@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practices - Html&Css&Js Projects</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+  </head>
+
+  <body>
+    <div class="main" id="main">
+      <div class="bg"></div>
+      <h1>Manon.icu</h1>
+      <p>
+        Although the other country is good, it's not my family, but when you
+        act, don't ask about your future.
+      </p>
+
+      <nav class="topbar">
+        <a class="topbar-item blog" href="https://blog.manon.icu">Blog</a>
+        <a class="topbar-item js" onclick="showPractices('js')">Js</a>
+        <a class="topbar-item css" onclick="showPractices('css')">Css</a>
+        <a class="topbar-item html" onclick="showPractices('html')">Html</a>
+      </nav>
+
+      <div class="about">about</div>
+      <div class="contact">contact</div>
+    </div>
+
+    <div class="about-me">
+      <div class="about-me-content">
+        <img
+          src="https://images.unsplash.com/photo-1542065435-d6bc2eac3377?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+          alt=""
+        />
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo.
+        </p>
+        <h2>Manon</h2>
+      </div>
+      <div class="close"></div>
+    </div>
+    <div class="contact-me">
+      <div class="contact-me-content">
+        <h2>Contact Me</h2>
+        <div class="input-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="input-group">
+          <label for="mail">Mail:</label>
+          <input type="email" id="mail" required>
+        </div>
+        <div class="input-group">
+          <label for="content">Content:</label>
+          <textarea type="text" id="content"></textarea>
+        </div>
+        <div class="input-group">Send</div>
+      </div>
+
+      <div class="close"></div>
+    </div>
+
+    <div class="practices">
+      <h2 class="practices-title"></h2>
+      <div class="practices-list"></div>
+      <div class="close"></div>
+    </div>
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>

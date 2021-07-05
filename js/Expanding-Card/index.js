@@ -1,4 +1,6 @@
+import "../../assets/css/reset.css";
 import "./index.css";
+
 const $cards = document.querySelector(".cards");
 $cards.addEventListener(
   "click",

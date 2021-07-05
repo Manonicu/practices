@@ -69,7 +69,6 @@ abbr[title] {
   border-bottom: none; /* Remove the bottom border in Chrome 57 */
   /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
   text-decoration: underline;
-  text-decoration: underline dotted;
 }
 
 a {
@@ -285,24 +284,33 @@ progress {
   cursor: default;
 }
 
-a {
-  text-decoration: underline;
-  text-decoration-color: cadetblue;
-  color: palevioletred;
-  transition: all 0.5s ease-in-out;
-}
-a:hover {
-  transform: translateX(8px);
-}
-
 li {
-  list-style: decimal-leading-zero;
-  list-style-position: inside;
+  list-style: decimal-leading-zero inside;
 }
 
 body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  padding: 30px;
+}
+
+/* oswald-regular - latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/oswald-v36-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/oswald-v36-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* caveat-regular - latin */
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/caveat-v10-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/caveat-v10-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
