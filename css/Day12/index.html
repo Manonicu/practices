@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day12</title>
+  <link rel="stylesheet" href="/assets/css/reset.css">
+</head>
+<body>
+<div id="app">
+  <div class="demo" id="demo">
+    <div class="content">
+      <div class="item">
+        <img src="/assets/images/avatar.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="/assets/images/avatar.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="/assets/images/avatar.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="/assets/images/avatar.png" alt="" />
+      </div>
+      <div
+        class="content__close"
+      >
+        &#10006;
+      </div>
+      <img src="/assets/images/avatar.png" alt="" class="avatar" />
+      <div class="content__top"></div>
+      <div class="content__bottom">
+        <h3>Julia Toth</h3>
+        <div class="btns">
+          <div class="btn">1</div>
+          <div class="btn">2</div>
+          <div class="btn">3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="module">
+  import './index.scss'
+  const $demo= document.querySelector("#demo");
+  document.querySelectorAll('.item').forEach(el=>{
+    el.addEventListener('click',()=>{
+      $demo.classList.add('active')
+    })
+  })
+  document.querySelector('.content__close').addEventListener('click',e=>{
+    e.stopPropagation();
+    $demo.classList.remove('active')
+  })
+</script>
+</body>
+</html>

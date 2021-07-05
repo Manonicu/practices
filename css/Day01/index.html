@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day01</title>
+  <link rel="stylesheet" href="/assets/css/reset.css">
+</head>
+<body>
+<div id="app">
+  <div class="day01" id="day01">
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+    <div class="line line3"></div>
+  </div>
+</div>
+<script type="module">
+  import './index.scss'
+  document.querySelector('#day01').addEventListener('click',e=>{
+    e.currentTarget.classList.toggle("active");
+    document.body.classList.remove("load");
+  })
+</script>
+</body>
+</html>

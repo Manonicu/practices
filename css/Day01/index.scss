@@ -1,0 +1,112 @@
+#app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+  align-items: center;
+  justify-content: center;
+}
+.day01 {
+  position: relative;
+  width: 30vw;
+  height: 1vw;
+  .line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25));
+    transform-origin: 50% 50%;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    top: 0;
+    left: 0;
+  }
+  .line2 {
+    transform: scale(1);
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .line1,
+  .line3 {
+    background-color: #fff;
+    border-radius: 5px;
+    transform: translateY(-750%) rotate(0);
+  }
+  .line3 {
+    transform: translateY(750%) rotate(0);
+  }
+  &.active {
+    .line2 {
+      transform: scale(0);
+      transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .line1 {
+      animation: moveBefore 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    }
+    .line3 {
+      animation: moveAfter 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    }
+  }
+  .line1 {
+    animation: afterMoveBefore 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+  .line3 {
+    animation: afterMoveAfter 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+  .line2 {
+    transition-delay: 0.5s;
+  }
+}
+.load {
+  .day01 {
+    .line1,
+    .line3 {
+      animation: none;
+    }
+  }
+}
+
+@keyframes afterMoveBefore {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-750%) rotate(0);
+  }
+}
+@keyframes afterMoveAfter {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(750%) rotate(0);
+  }
+}
+@keyframes moveBefore {
+  0% {
+    transform: translateY(-750%) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+@keyframes moveAfter {
+  0% {
+    transform: translateY(750%) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+}

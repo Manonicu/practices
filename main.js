@@ -1,6 +1,6 @@
 const modules = {
   js:import.meta.glob(`./js/**/*.js`),
-  css:import.meta.glob(`./css/**/*.js`),
+  css:import.meta.glob(`./css/**/index.html`),
   html:import.meta.glob(`./html/**/*.js`)
 }
 const $main = document.querySelector('#main')
@@ -33,13 +33,15 @@ document.querySelectorAll(".close").forEach(function(el){
 })
 
 window.showPractices = async (type) => {
+  console.log(type)
   const $title = document.querySelector('.practices-title');
   const $list = document.querySelector('.practices-list');
   let _html = '';
   $main.classList.add('rotate');
   Object.keys(modules[type]).forEach(item=>{
+    console.log(item,"item")
     const name = item.split('/')[2];
-    _html+=`<div class="item"><img src="/assets/images/${name}.png" alt=""><h3><a href="/${type}/${name}/index.html">${name}</a></h3></div>`
+    _html+=`<div class="item"><img src="/assets/images/${type}/${name}.png" alt=""><h3><a href="/${type}/${name}/index.html">${name}</a></h3></div>`
   })
   $list.innerHTML=_html
   $title.innerText=`${type.toUpperCase()} - Practices`;
