@@ -41,7 +41,7 @@ window.showPractices = async (type) => {
   Object.keys(modules[type]).forEach(item=>{
     console.log(item,"item")
     const name = item.split('/')[2];
-    _html+=`<div class="item"><img src="/assets/images/${type}/${name}.png" alt=""><h3><a href="/${type}/${name}/index.html">${name}</a></h3></div>`
+    _html+=`<div class="item"><img src="/images/${type}/${name}.png" alt=""><h3><a href="/${type}/${name}/index.html">${name}</a></h3></div>`
   })
   $list.innerHTML=_html
   $title.innerText=`${type.toUpperCase()} - Practices`;

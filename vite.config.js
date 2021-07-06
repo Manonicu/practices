@@ -1,48 +1,18 @@
 import {resolve} from "path"
-import viteImagemin from 'vite-plugin-imagemin';
 
 module.exports = {
-  plugins:[
-    viteImagemin({
-      gifsicle: {
-        optimizationLevel: 7,
-        interlaced: false,
-      },
-      optipng: {
-        optimizationLevel: 7,
-      },
-      webp: {
-        quality: 75,
-      },
-      mozjpeg: {
-        quality: 65,
-      },
-      pngquant: {
-        quality: [0.65, 0.9],
-        speed: 4,
-      },
-      svgo: {
-        plugins: [
-          {
-            removeViewBox: false,
-          },
-          {
-            removeEmptyAttrs: false,
-          },
-        ],
-      },
-    }),
-  ],
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
         drumKit: resolve(__dirname, 'js/Drum-Kit/index.html'),
-        expandingCard: resolve(__dirname, 'js/Expanding-Card/index.html')
+        expandingCard: resolve(__dirname, 'js/Expanding-Card/index.html'),
+        day01: resolve(__dirname, 'css/Day01/index.html'),
+        day02: resolve(__dirname, 'css/Day02/index.html'),
+        day03: resolve(__dirname, 'css/Day03/index.html'),
+        day05: resolve(__dirname, 'css/Day05/index.html'),
+        day12: resolve(__dirname, 'css/Day12/index.html'),
       }
     }
-  },
-  "compilerOptions": {
-    "types": ["vite/client"]
   }
 }
